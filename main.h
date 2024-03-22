@@ -60,5 +60,10 @@ typedef struct instruction_s
 void _add_(stack_t **hd, unsigned int c);
 /* add_node */
 void _add_node(stack_t **hd, int x);
-
+/* _div.c */
+void m_div(stack_t **hd, unsigned int c);
+/* _excute.cm*/
+int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f);
+/* f_stack.c */
+void f_stack(stack_t *hd);
 #endif /* MAIN_H */
