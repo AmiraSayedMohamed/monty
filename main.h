@@ -75,4 +75,8 @@ void m_nop(stack_t **hd, unsigned int c);
 void m_pall(stack_t **hd, unsigned int c);
 /* m_putchar.c */
 void m_putchar(stack_t **hd, unsigned int c);
+/* pint_and_pop.c */
+void m_pop(stack_t **hd, unsigned int c);
+void m_pint(stack_t **hd, unsigned int c);
+
 #endif /* MAIN_H */
