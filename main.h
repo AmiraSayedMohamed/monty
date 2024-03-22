@@ -78,5 +78,16 @@ void m_putchar(stack_t **hd, unsigned int c);
 /* pint_and_pop.c */
 void m_pop(stack_t **hd, unsigned int c);
 void m_pint(stack_t **hd, unsigned int c);
-
+/* pstr_and_push.c */
+void m_push(stack_t **hd, unsigned int c);
+void m_pstr(stack_t **hd, unsigned int c);
+/* _queue.c */
+void m_queue(stack_t **hd, unsigned int c);
+void _add_queue(stack_t **hd, int n);
+/* rotl_rotr_stack_sub_swap.c */
+void m_rotl(stack_t **hd,  __attribute__((unused)) unsigned int c);
+void m_rotr(stack_t **hd, __attribute__((unused)) unsigned int c);
+void m_stack(stack_t **hd, unsigned int c);
+void m_sub(stack_t **hd, unsigned int c);
+void m_swap(stack_t **hd, unsigned int c);
 #endif /* MAIN_H */
