@@ -66,4 +66,13 @@ void m_div(stack_t **hd, unsigned int c);
 int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f);
 /* f_stack.c */
 void f_stack(stack_t *hd);
+/* _mod.c */
+void m_mod(stack_t **hd, unsigned int c);
+/* _mul.c */
+void m_mul(stack_t **hd, unsigned int c);
+/* _nop.c */
+void m_nop(stack_t **hd, unsigned int c);
+void m_pall(stack_t **hd, unsigned int c);
+/* m_putchar.c */
+void m_putchar(stack_t **hd, unsigned int c);
 #endif /* MAIN_H */
