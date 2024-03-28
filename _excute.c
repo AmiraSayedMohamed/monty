@@ -13,7 +13,7 @@ int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f)
 				{"push", m_push}, {"pall", m_pall}, {"pint", m_pint},
 				{"pop", m_pop},
 				{"swap", m_swap},
-				{"add", m_add},
+				{"add", _add_},
 				{"nop", m_nop},
 				{"sub", m_sub},
 				{"div", m_div},
@@ -46,7 +46,7 @@ int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", c, op_);
 		fclose(f);
 		free(contnt);
-		f_stack(*stack);
+		f_stack(*stk);
 		exit(EXIT_FAILURE); }
 	return (1);
 }
