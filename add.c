@@ -21,7 +21,7 @@ void _add_(stack_t **hd, unsigned int c)
 		fprintf(stderr, "L%d: can't add, stack too short\n", c);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*hd);
+		f_stack(*hd);
 		exit(EXIT_FAILURE);
 	}
 	h = *hd;

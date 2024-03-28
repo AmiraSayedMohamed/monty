@@ -59,7 +59,7 @@ typedef struct instruction_s
 /* add.c */
 void _add_(stack_t **hd, unsigned int c);
 /* add_node */
-void _add_node(stack_t **hd, int x);
+void _add_node(stack_t **hd, int n);
 /* _div.c */
 void m_div(stack_t **hd, unsigned int c);
 /* _excute.cm*/

@@ -5,7 +5,7 @@
  * @x: new_value
  * Return: no return
 */
-void _add_node(stack_t **hd, int x)
+void _add_node(stack_t **hd, int n)
 {
 
 	stack_t *n_node, *ax;
@@ -17,7 +17,7 @@ void _add_node(stack_t **hd, int x)
 		exit(0); }
 	if (ax)
 		ax->prev = n_node;
-	n_node->x = x;
+	n_node->n  = n;
 	n_node->next = *hd;
 	n_node->prev = NULL;
 	*hd = n_node;
