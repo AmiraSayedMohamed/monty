@@ -10,21 +10,21 @@
 int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f)
 {
 	instruction_t opst[] = {
-				{"push", m_push}, {"pall", f_pall}, {"pint", f_pint},
-				{"pop", f_pop},
-				{"swap", f_swap},
-				{"add", f_add},
-				{"nop", f_nop},
-				{"sub", f_sub},
-				{"div", f_div},
-				{"mul", f_mul},
-				{"mod", f_mod},
-				{"pchar", f_pchar},
-				{"pstr", f_pstr},
-				{"rotl", f_rotl},
-				{"rotr", f_rotr},
-				{"queue", f_queue},
-				{"stack", f_stack},
+				{"push", m_push}, {"pall", m_pall}, {"pint", m_pint},
+				{"pop", m_pop},
+				{"swap", m_swap},
+				{"add", m_add},
+				{"nop", m_nop},
+				{"sub", m_sub},
+				{"div", m_div},
+				{"mul", m_mul},
+				{"mod", m_mod},
+				{"pchar", m_pchar},
+				{"pstr", m_pstr},
+				{"rotl", m_rotl},
+				{"rotr", m_rotr},
+				{"queue", m_queue},
+				{"stack", m_stack},
 				{NULL, NULL}
 				};
 	unsigned int j = 0;
@@ -37,16 +37,16 @@ int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f)
 	while (opst[j].opcode && op_)
 	{
 		if (strcmp(op_, opst[j].opcode) == 0)
-		{	opst[j].f(stack, c);
+		{	opst[j].f(stk, c);
 			return (0);
 		}
 		j++;
 	}
 	if (op_ && opst[j].opcode == NULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", c, op_);
-		fclose(file);
+		fclose(f);
 		free(contnt);
-		free_stack(*stack);
+		f_stack(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }
