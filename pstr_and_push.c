@@ -52,7 +52,7 @@ void m_push(stack_t **hd, unsigned int c)
 	{ fprintf(stderr, "L%d: usage: push integer\n", c);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*hd);
+		f_stack(*hd);
 		exit(EXIT_FAILURE); }
 	x = atoi(bus.arg);
 	if (bus.lifi == 0)

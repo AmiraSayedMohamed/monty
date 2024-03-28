@@ -33,7 +33,7 @@ void m_pop(stack_t **hd, unsigned int c)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", c);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*hd);
+		f_stack(*hd);
 		exit(EXIT_FAILURE);
 	}
 	h = *hd;
