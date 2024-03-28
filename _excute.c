@@ -19,7 +19,7 @@ int _execute(char *contnt, stack_t **stk, unsigned int c, FILE *f)
 				{"div", m_div},
 				{"mul", m_mul},
 				{"mod", m_mod},
-				{"pchar", m_pchar},
+				{"pchar", m_putchar},
 				{"pstr", m_pstr},
 				{"rotl", m_rotl},
 				{"rotr", m_rotr},

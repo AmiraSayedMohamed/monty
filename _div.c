@@ -30,7 +30,7 @@ void m_div(stack_t **hd, unsigned int c)
 		fprintf(stderr, "L%d: division by zero\n", c);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*hd);
+		f_stack(*hd);
 		exit(EXIT_FAILURE);
 	}
 	ax = h->next->n / h->n;
