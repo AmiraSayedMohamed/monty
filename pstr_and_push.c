@@ -46,7 +46,7 @@ void m_push(stack_t **hd, unsigned int c)
 		{ fprintf(stderr, "L%d: usage: push integer\n", c);
 			fclose(bus.file);
 			free(bus.content);
-			free_stack(*hd);
+			f_stack(*hd);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", c);
@@ -54,7 +54,7 @@ void m_push(stack_t **hd, unsigned int c)
 		free(bus.content);
 		free_stack(*hd);
 		exit(EXIT_FAILURE); }
-	n = atoi(bus.arg);
+	x = atoi(bus.arg);
 	if (bus.lifi == 0)
 		_add_node(hd, x);
 	else

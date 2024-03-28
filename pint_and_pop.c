@@ -12,7 +12,7 @@ void m_pint(stack_t **hd, unsigned int c)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", c);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*hd);
+		f_stack(*hd);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*hd)->n);

@@ -7,8 +7,8 @@
  */
 void m_nop(stack_t **hd, unsigned int c)
 {
-	(void) counter;
-	(void) head;
+	(void) c;
+	(void) hd;
 }
 
 /**
